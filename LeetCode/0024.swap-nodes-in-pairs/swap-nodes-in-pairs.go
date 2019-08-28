@@ -1,4 +1,4 @@
-package _24
+package _0024
 
 import "Algorithm/DataStructure"
 

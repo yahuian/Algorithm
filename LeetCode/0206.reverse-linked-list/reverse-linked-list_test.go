@@ -1,4 +1,4 @@
-package _206
+package _0206
 
 import (
 	"Algorithm/DataStructure"
