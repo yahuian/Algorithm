@@ -1,3 +1,3 @@
-module github.com/yahuian/Algorithm
+module Algorithm
 
 go 1.13
