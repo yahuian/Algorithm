@@ -19,19 +19,24 @@ func partition(s []int, left, right int) int {
 	pivot := s[left] // 基准
 	for i != j {
 		// 从右边找小于基准的值
-		for s[j] > pivot && i < j {
+		for s[j] >= pivot && i < j {
 			j--
 		}
 		// 从左边找大于基准的值
-		for s[i] < pivot && i < j {
+		for s[i] <= pivot && i < j {
 			i++
 		}
 		// 大于基准的和小于基准的交换位置
-		s[i], s[j] = s[j], s[i]
+		if i < j {
+			s[i], s[j] = s[j], s[i]
+		}
 	}
 	// i = j时会跳出外层for循环
-	s[i], s[left] = s[left], s[i]
-	return i
+	if s[i] < s[left] {
+		s[i], s[left] = s[left], s[i]
+		return i
+	}
+	return left
 }
 
 // 参考资料：https://bbs.codeaha.com/thread-4419-1-1.html
