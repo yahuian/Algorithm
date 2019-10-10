@@ -51,14 +51,14 @@ func TestQuickSort(t *testing.T) {
 			want: []int{-5467984, -784, 0, 0, 42, 59, 74, 238, 905, 959, 7586, 7586, 9845},
 		},
 		{
-			name: "test5",
+			name: "test6",
 			args: args{
 				s: []int{9, 8, 7, 6, 5, 4, 3, 2, 1},
 			},
 			want: []int{1, 2, 3, 4, 5, 6, 7, 8, 9},
 		},
 		{
-			name: "test6",
+			name: "test7",
 			args: args{
 				s: []int{1, 2, 3, 3, 2, 1},
 			},
