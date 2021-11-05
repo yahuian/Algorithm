@@ -25,3 +25,24 @@ func swapPairs(head *ListNode) *ListNode {
 }
 
 // https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/hua-jie-suan-fa-24-liang-liang-jiao-huan-lian-biao/
+
+// 递归法
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+
+func swapPairs2(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	var tmp = head.Next
+	var after = swapPairs2(tmp.Next)
+	head.Next = after
+	tmp.Next = head
+	return tmp
+}
